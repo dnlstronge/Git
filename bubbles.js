@@ -17,7 +17,7 @@ var checkArray = find(numHigh,scores);
 // console.log(checkArray); output: 11, 18
 
 
-  // Function (checks array for matches)
+// Function (checks array for matches)
 
 function find(numHigh, scores) {
     var results = [];
