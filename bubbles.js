@@ -16,17 +16,27 @@ var numHigh = Math.max.apply(Math, scores);
 var checkArray = find(numHigh,scores);
 // console.log(checkArray); output: 11, 18
 
-// Function (checks array for matches)
+
+  // Function (checks array for matches)
 
 function find(numHigh, scores) {
     var results = [];
     var idx = scores.indexOf(numHigh);
     while (idx != -1) {
-        results.push(idx);
+        results.push(' #'+idx);
         idx = scores.indexOf(69, idx + 1);
     }
     return results;
 }
+
+// Lists requested data
+
+for (i = 0; i < scores.length; i++)
+console.log("Bubble solution #" + (i+1) + " score: " + scores[i]);
+console.log("Bubble tests: " + numTests);
+console.log("Highest bubble score: " + numHigh);
+console.log("Solutions with highest score: " + checkArray);
+
 
 
 
