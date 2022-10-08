@@ -1,6 +1,8 @@
 # Git
 
+PHRASEGENERATOR: 
 
+Task: create a phrase generator which returns random values together to create made up business vernacular and slogans
 
 PLAYERSGONNAPLAY1-2:
 
