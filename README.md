@@ -1,5 +1,10 @@
 # Git
 
+TODAYSSPECIAL:
+
+Task: return values for todays special, use getter/setter to ensure correct values must be entered
+
+
 PHRASEGENERATOR: 
 
 Task: create a phrase generator which returns random values together to create made up business vernacular and slogans
