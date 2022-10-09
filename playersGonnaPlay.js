@@ -1,9 +1,7 @@
 
-
-
 const team = {
     
-  
+    
     _players: [
 
     {firstName: 'Dave',
@@ -20,7 +18,6 @@ const team = {
       }],
 
     _games: [
-
     { opponent: 'The Burglers' , teamPoints: 13, opponentPoints: 12 },
 
     { opponent: 'The Rapscallions' , teamPoints: 5 , opponentPoints: 9 },
@@ -32,8 +29,7 @@ const team = {
     },
     get games() {return this._games;
     },
-    
-// method
+
    addPlayer(newFirstName, newLastName, newAge){
       
       let player = {
@@ -44,24 +40,23 @@ const team = {
 
       this.players.push(player);
    
+   },
+   addGames(newOpponent, newTeamPoints, newOpponentPoints){
+     let game = {
+       opponent: newOpponent,
+       teamPoints: newTeamPoints,
+       opponentPoints: newOpponentPoints
+     }
+     this.games.push(game);
    }
   
 };
 
-// Test: add team player using add player method and log
-
-team.addPlayer('Randy', 'Bobandi', 45);
-console.log(team.players);
+//team.addPlayer('Randy', 'Bobandi', 45);
+//console.log(team.players);
     
-/* 
+team.addGames('Titans', 100, 98);
+console.log(team.games);
+    
 
-logs to console:
-
-node playersGonnaPlay.js
-[
-  { firstName: 'Dave', lastName: 'Ballsack', age: 32 },
-  { firstName: 'Harry', lastName: 'Flopsweat', age: 28 },
-  { firstName: 'Billy', lastName: 'Nomates', age: 22 },
-  { firstName: 'Randy', lastName: 'Bobandi', age: 45 }
-]
-*/
+//console.log(team._players);
