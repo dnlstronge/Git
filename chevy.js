@@ -34,6 +34,9 @@ var fiat = {
     passengers: 2,
     convertible: false,
     mileage: 88000,
+    drive: function() {
+        console.log("ZOOM ZOOM!")
+    }
 
 };
 
@@ -68,4 +71,4 @@ if (worthALook) {
     console.log("You should really pass on the " + chevy.make + " " + chevy.model)
 }
 
-
+fiat.drive()
