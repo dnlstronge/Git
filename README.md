@@ -2,7 +2,7 @@
 
 CHEVY
 
-added object
+Objects exercise - create various objects and call function based on different propertys meeting Boolean conditional. 
 
 
 TODAYSSPECIAL:
