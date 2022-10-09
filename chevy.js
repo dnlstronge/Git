@@ -34,12 +34,23 @@ var fiat = {
     passengers: 2,
     convertible: false,
     mileage: 88000,
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+
     drive: function() {
-        console.log("ZOOM ZOOM!")
+        if (this.started) {
+            console.log("ZOOM ZOOM!");
+    } else {
+        console.log("You need to start the engine first");
     }
 
+}
 };
-
 var taxi = {
         make: "Webville Motors",
         model: "Taxi",
@@ -50,7 +61,7 @@ var taxi = {
         mileage: 281341
     
 
-};
+}
 
 //new exercise - add fucntion to determine whether user purchases
 
@@ -71,4 +82,7 @@ if (worthALook) {
     console.log("You should really pass on the " + chevy.make + " " + chevy.model)
 }
 
-fiat.drive()
+fiat.drive();
+fiat.start();
+fiat.drive();
+fiat.stop();
