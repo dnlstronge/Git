@@ -9,6 +9,23 @@ var chevy = {
     passengers: 2,
     convertible: false,
     mileage: 1021,
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+
+    drive: function() {
+        if (this.started) {
+            console.log(this.make + " " +
+            this.model + " goes ZOOM ZOOM!");
+    } else {
+        console.log("You need to start the engine first");
+    }
+
+}
 };
 
 // add new obj for cadillac
@@ -21,6 +38,24 @@ var cadi = {
     passengers: 5,
     convertible: false,
     mileage: 12892,
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+
+    drive: function() {
+        if (this.started) {
+            console.log(this.make + " " +
+            this.model + " goes ZOOM ZOOM!");
+    } else {
+        console.log("You need to start the engine first");
+    }
+
+}
+    
 
 }
 
@@ -44,7 +79,8 @@ var fiat = {
 
     drive: function() {
         if (this.started) {
-            console.log("ZOOM ZOOM!");
+            console.log(this.make + " " +
+            this.model + " goes ZOOM ZOOM!");
     } else {
         console.log("You need to start the engine first");
     }
@@ -58,7 +94,24 @@ var taxi = {
         color: "yeller",
         passengers: 4,
         convertible: false,
-        mileage: 281341
+        mileage: 281341,
+        started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+
+    drive: function() {
+        if (this.started) {
+            console.log(this.make + " " +
+                this.model + " goes ZOOM ZOOM!");
+    } else {
+        console.log("You need to start the engine first");
+    }
+
+}
     
 
 }
@@ -86,3 +139,7 @@ fiat.drive();
 fiat.start();
 fiat.drive();
 fiat.stop();
+chevy.start();
+chevy.drive();
+chevy.stop();
+chevy.drive();
