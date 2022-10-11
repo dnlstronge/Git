@@ -73,20 +73,27 @@ var fiat = {
     fuel: 0,
  
     start: function() {
-        this.started = true;
+        if (this.fuel >= 1) return true;
+        else {console.log("The tank is empty, better fill up first!")}
     },
     stop: function() {
         this.started = false;
     },
 
+
+
     drive: function() {
         if (this.started) {
-            console.log(this.make + " " +
+            if (this.fuel > 0 ) {
+                console.log(this.make + " " +
             this.model + " goes ZOOM ZOOM!");
+        this.fuel = this.fuel -1;
+        } else { console.log("uh oh, out of fuel")
+            this.stop()}
     } else {
         console.log("You need to start the engine first");
     }
-   }
+   },
     addFuel: function (amount) {
         this.fuel = this.fuel + amount;
     }
@@ -141,9 +148,9 @@ if (worthALook) {
 
 fiat.drive();
 fiat.start();
+fiat.addFuel(0);
+fiat.start();
+fiat.drive();
+fiat.drive();
 fiat.drive();
 fiat.stop();
-chevy.start();
-chevy.drive();
-chevy.stop();
-chevy.drive();
