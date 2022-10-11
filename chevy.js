@@ -70,6 +70,8 @@ var fiat = {
     convertible: false,
     mileage: 88000,
     started: false,
+    fuel: 0,
+ 
     start: function() {
         this.started = true;
     },
@@ -84,8 +86,10 @@ var fiat = {
     } else {
         console.log("You need to start the engine first");
     }
-
-}
+   }
+    addFuel: function (amount) {
+        this.fuel = this.fuel + amount;
+    }
 };
 var taxi = {
         make: "Webville Motors",
