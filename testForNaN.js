@@ -17,3 +17,9 @@ if (isNaN(nanny)) {
 console.log(nanny);
 
 // ah.....0 lives!!
+
+if (99 == '99') {
+    console.log("A number equals a string")
+} else {
+    console.log("no way a number equals a string")
+};
