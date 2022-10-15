@@ -73,8 +73,8 @@ var fiat = {
     fuel: 0,
  
     start: function() {
-        if (this.fuel >= 1) return true;
-        else {console.log("The tank is empty, better fill up first!")}
+        if (this.fuel >= 1) {this.started = true}
+        else {console.log("The tank is empty, better fill up first!"); this.started = false}
     },
     stop: function() {
         this.started = false;
@@ -83,19 +83,22 @@ var fiat = {
 
 
     drive: function() {
-        if (this.started) {
-            if (this.fuel > 0 ) {
+        if (this.started = true && this.fuel > 0 ) {
+           
                 console.log(this.make + " " +
             this.model + " goes ZOOM ZOOM!");
         this.fuel = this.fuel -1;
-        } else { console.log("uh oh, out of fuel")
-            this.stop()}
-    } else {
-        console.log("You need to start the engine first");
+        } else if (this.started = true && this.fuel < 1) { console.log("uh oh, out of fuel")
+            this.stop()
+        } else {
+        console.log("You need to start the engine first")
+        this.stop();
     }
    },
     addFuel: function (amount) {
         this.fuel = this.fuel + amount;
+        console.log("glug, glug, " + amount + " fuel added")
+        this.stop();
     }
 };
 var taxi = {
@@ -146,11 +149,11 @@ if (worthALook) {
     console.log("You should really pass on the " + chevy.make + " " + chevy.model)
 }
 
+
+// tests
+
+fiat.addFuel(2);
 fiat.drive();
-fiat.start();
-fiat.addFuel(0);
-fiat.start();
+fiat.stop()
+
 fiat.drive();
-fiat.drive();
-fiat.drive();
-fiat.stop();
