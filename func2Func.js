@@ -6,3 +6,13 @@ var passengers = [
 
 
 ]
+
+// checks if paid
+function checkPaid(passengers) {
+    for (let i = 0; i < passengers.length; i++) {
+        if (!passengers.paid) {
+            return false;
+        }
+        return true;
+    }
+}
