@@ -1,4 +1,5 @@
 // Convert given roman numeral to an integer
+//
 var toInt = function(s) {
     var mapSym = { 
         'I': 1,
@@ -31,4 +32,4 @@ var toInt = function(s) {
     return total;
 }
 
-console.log(toInt('XVII'));
+console.log(toInt('MCLXIV'));
