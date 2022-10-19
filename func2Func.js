@@ -1,36 +1,45 @@
 var passengers = [
-    {name: "Dr Proctor", paid: true},
+    {name: "Dr Steve", paid: false},
     {name: "Ms Round", paid: true},
-    {name: "Mr Jefferson", paid: false},
+    {name: "Mr Jefferson", paid: true},
     {name: "Lord Maltese", paid: true}
 
 
 ]
+var allCanFly = processPassengers(passengers, noFly);
+if (!allCanFly) {console.log("The plane can't take off, there is a passenger on the No Fly list")}
 
-// checks if paid
+var allPaid = processPassengers(passengers, checkPaid);
+if (!allPaid) {
+    console.log("The plane can't take off; someone hasn't paid the troll toll");
+}
+
+
+
+function processPassengers(passengers, testFunction) {
+    for (let i = 0; i < passengers.length; i++) {
+    if (testFunction(passengers[i])) {
+        return false;
+        }
+    }
+    return true;
+}
+
+
+//nofly or paid?
+
+function noFly(passengers) {
+ return (passengers.name === "Dr Proctor");
+}
+
 function checkPaid(passengers) {
-    for (let i = 0; i < passengers.length; i++) {
-        if (!passengers[i].paid) {
-            return false;
-        }
-        
-    }
-    return true;
+    return (!passengers.paid)
 }
-function checkNoFy (passengers) {
-    for (let i = 0; i < passengers.length; i++) {
-        if (noFlyList(passengers[i].name)) {
-            return false;
-        }
-        
-    }
-    return true;
-}
-function printPassengers(passengers) {
-    for (let i = 0; i < passengers.length; i++) {
-        console.log(passengers[i].name)
-    }
-    return true; // dont care about the return just the iteration
-}
+
+
+
 /* would it not be better to create one function to iterate? and then pass
-a function to a function? */
+a function to a function? */ // (now implemented)
+
+// tested 'Dr Robotnik@ returns expected response as does a false value for paid
+// on any of the passengers in the array
