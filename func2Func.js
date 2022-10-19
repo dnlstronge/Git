@@ -32,3 +32,5 @@ function printPassengers(passengers) {
     }
     return true; // dont care about the return just the iteration
 }
+/* would it not be better to create one function to iterate? and then pass
+a function to a function? */
