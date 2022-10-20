@@ -24,3 +24,5 @@ function compareSold (colaA, colaB) {
         return -1;
     }
     }
+products.sort(compareSold)
+// test: ran test in browser, output is as expected 
