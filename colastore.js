@@ -24,5 +24,18 @@ function compareSold (colaA, colaB) {
         return -1;
     }
     }
-products.sort(compareSold)
+//products.sort(compareSold)
 // test: ran test in browser, output is as expected 
+// next add function to print to console
+
+function printProducts(products) {
+    for (var i = 0; i < products.length; i++) {
+        console.log("Name: " + products[i].name + ", Calories: " + products[i].calories + 
+        ", Color: " + products[i].color + ", Sold: " + products[i].sold);
+    }
+}
+
+// test: 
+
+// products.sort(compareSold); (clear)
+// printProducts(products); (clear)
