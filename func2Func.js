@@ -1,7 +1,7 @@
 var passengers = [
     {name: "Dr Steve", paid: false, ticket: "firstclass"},
     {name: "Ms Round", paid: true, ticket: "coach"},
-    {name: "Mr Jefferson", paid: true, ticket: "coach"},
+    {name: "Mr Jefferson", paid: true, ticket: "premium"},
     {name: "Lord Maltese", paid: true, ticket: "firstclass"}
 
 
@@ -18,8 +18,9 @@ if (!allPaid) {
 // make the function accept more than one order
 function serveCustomer(passenger) {
    var getDrinkOrderFunction = createDrinkOrder(passenger);
+   var getDinnerOrderFunction = createDinnerOrder(passenger);
    getDrinkOrderFunction();
-    //get dinner order
+   getDinnerOrderFunction()
    getDrinkOrderFunction();
    getDrinkOrderFunction();
    // show movie
@@ -33,14 +34,45 @@ function createDrinkOrder(passenger) {
     if (passenger.ticket === "firstclass") {
         orderFunction = function() {
             alert("Care for some champagne?");
-        }
+        };
+        } else if (passenger.ticket === "premium") {
+            orderFunction = function() {
+                alert("Wine, soda or water?")
+            };
         } else {
             orderFunction = function() {
-                alert("Care for some water?")
-            }
+                alert("soda or water?")
+            };
         }
         return orderFunction;
     }
+
+    // DINNER ORDER 
+
+    function createDinnerOrder(passenger) {
+        var orderFunction;
+        if (passenger.ticket === "firstclass") {
+            orderFunction = function() {
+                alert("Chicken or pasta?");
+            };
+            } else if (passenger.ticket === "premium"){
+                orderFunction = function() {
+                    alert("Snacks or cheese plate?")
+                };
+            }
+                else {
+                    orderFunction = function() {
+                        alert("Peanuts or pretzels?");
+                    };
+                }
+            
+            return orderFunction;
+        }
+
+
+
+
+
 
     // iterate over passengers
 function servePassengers(passengers) {
