@@ -24,6 +24,39 @@ function compareSold (colaA, colaB) {
         return -1;
     }
     }
+
+    //new function to compare ny calories
+    function compareCalories (colaA, colaB) {
+        if (colaA.calories > colaB.calories) {
+            return 1;
+        } else if (colaA.calories == colaB.calories) {
+            return 0;
+        } else {
+            return -1;
+        }
+        }
+        // New function to sort by name:
+
+function compareName (colaA, colaB) {
+    if (colaA.name > colaB.name) {
+        return 1;
+    } else if (colaA.name == colaB.name) {
+        return 0;
+    } else {
+        return -1;
+    }
+    }
+    function compareColor (colaA, colaB) {
+        if (colaA.color > colaB.color) {
+            return 1;
+        } else if (colaA.color == colaB.color) {
+            return 0;
+        } else {
+            return -1;
+        }
+        }
+        
+
 //products.sort(compareSold)
 // test: ran test in browser, output is as expected 
 // next add function to print to console
@@ -37,5 +70,22 @@ function printProducts(products) {
 
 // test: 
 
-// products.sort(compareSold); (clear)
-// printProducts(products); (clear)
+// products.sort(compareSold); //(clear)
+// printProducts(products); // (clear)
+
+// test 2:
+
+products.sort(compareCalories); //(clear)
+printProducts(products); //(clear)
+
+
+// test 3:
+
+products.sort(compareName); //(clear)
+printProducts(products); //(clear)
+
+
+// test 4: 
+
+products.sort(compareColor); // (clear)
+printProducts(products); // (clear)
