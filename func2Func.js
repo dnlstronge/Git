@@ -17,11 +17,14 @@ if (!allPaid) {
 //would it not be better to have the function return functions?
 // make the function accept more than one order
 function serveCustomer(passenger) {
+   var getDrinkOrderFunction = createDrinkOrder(passenger);
+   getDrinkOrderFunction();
     //get dinner order
-    createDrinkOrder(passenger);
-    createDrinkOrder(passenger);
-    // show movie
-    createDrinkOrder(passenger);
+   getDrinkOrderFunction();
+   getDrinkOrderFunction();
+   // show movie
+   getDrinkOrderFunction();
+    //clean up
 }
 
 // create order returns a function which takes the order
@@ -39,8 +42,12 @@ function createDrinkOrder(passenger) {
         return orderFunction;
     }
 
-    
-    //pick up rubbish
+    // iterate over passengers
+function servePassengers(passengers) {
+    for (var i = 1; i < passengers.length; i++) {
+        serveCustomer(passengers[i]);
+    }
+}
 
 
 function processPassengers(passengers, testFunction) {
