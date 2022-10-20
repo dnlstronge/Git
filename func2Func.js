@@ -13,9 +13,13 @@ var allPaid = processPassengers(passengers, checkPaid);
 if (!allPaid) {
     console.log("The plane can't take off; someone hasn't paid the troll toll");
 }
-
+// what if the drinks options become more complex? this could get messy...
+//would it not be better to have the function return functions?
+// make the function accept more than one order
 function serveCustomer(passenger) {
     //get drink order
+    creatDrinkOrder(passenger);
+    }
     //get dinner order
     //pick up rubbish
 }
