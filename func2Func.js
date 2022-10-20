@@ -17,12 +17,31 @@ if (!allPaid) {
 //would it not be better to have the function return functions?
 // make the function accept more than one order
 function serveCustomer(passenger) {
-    //get drink order
-    creatDrinkOrder(passenger);
-    }
     //get dinner order
-    //pick up rubbish
+    createDrinkOrder(passenger);
+    createDrinkOrder(passenger);
+    // show movie
+    createDrinkOrder(passenger);
 }
+
+// create order returns a function which takes the order
+function createDrinkOrder(passenger) {
+    var orderFunction;
+    if (passenger.ticket === "firstclass") {
+        orderFunction = function() {
+            alert("Care for some champagne?");
+        }
+        } else {
+            orderFunction = function() {
+                alert("Care for some water?")
+            }
+        }
+        return orderFunction;
+    }
+
+    
+    //pick up rubbish
+
 
 function processPassengers(passengers, testFunction) {
     for (let i = 0; i < passengers.length; i++) {
