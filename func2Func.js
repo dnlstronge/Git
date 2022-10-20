@@ -1,8 +1,8 @@
 var passengers = [
-    {name: "Dr Steve", paid: false},
-    {name: "Ms Round", paid: true},
-    {name: "Mr Jefferson", paid: true},
-    {name: "Lord Maltese", paid: true}
+    {name: "Dr Steve", paid: false, ticket: "firstclass"},
+    {name: "Ms Round", paid: true, ticket: "coach"},
+    {name: "Mr Jefferson", paid: true, ticket: "coach"},
+    {name: "Lord Maltese", paid: true, ticket: "firstclass"}
 
 
 ]
@@ -14,7 +14,11 @@ if (!allPaid) {
     console.log("The plane can't take off; someone hasn't paid the troll toll");
 }
 
-
+function serveCustomer(passenger) {
+    //get drink order
+    //get dinner order
+    //pick up rubbish
+}
 
 function processPassengers(passengers, testFunction) {
     for (let i = 0; i < passengers.length; i++) {
