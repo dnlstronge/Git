@@ -7,7 +7,10 @@
         div {padding: 10px;}
 </style>
 <script>
-    var count = 0;
+
+    //WITHOUT CLOSURE
+    
+    /* var count = 0;
     window.onload = function() {
         var button = document.getElementById("clickMe")
         button.onclick = handleClick;
@@ -19,7 +22,20 @@
         div.innerHTML = message + count + " times!"
     }
 
-    // without closure??? 
+ */
+//WITH CLOSURE
+window.onload = function() {
+    var count = 0;
+    var message = "You clicked me ";
+    var div = document.getElementById("message");
+
+    var button = document.getElementById("clickMe");
+    button.onclick = function() {
+        count++ 
+        div.innerHTML = message + count + " times!";
+    };
+};
+
     
 
 </script>
