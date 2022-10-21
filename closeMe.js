@@ -22,6 +22,8 @@ var closures3 = function testme() {
 }
 return beep();
 }
+
+//test code
 console.log(closures3());
 
 
