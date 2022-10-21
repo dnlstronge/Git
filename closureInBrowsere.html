@@ -7,11 +7,25 @@
         div {padding: 10px;}
 </style>
 <script>
+    var count = 0;
+    window.onload = function() {
+        var button = document.getElementById("clickMe")
+        button.onclick = handleClick;
+    };
+    function handleClick() {
+        var message = "You clicked me ";
+        var div = document.getElementById("message");
+        count++;
+        div.innerHTML = message + count + " times!"
+    }
+
+    // without closure??? 
+    
 
 </script>
 </head>
 <body>
-    <button id ="clickme"> Click Me!</button>
+    <button id ="clickMe"> Click Me!</button>
     <div id="message"></div>
 </body>
 
