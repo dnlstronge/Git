@@ -17,8 +17,8 @@ let reset = function() {
 };
 resetButton.onclick = reset;
 
-changetext() => {
-  itemThree.innerHTML = ('The mouse has left the element')
+function changeText() {
+  itemThree.innerHTML = 'The mouse has left the element'
 }
 
 function changeBackground() {
@@ -30,3 +30,4 @@ function increaseWidth() {
 }
 itemOne.addEventListener('mouseover', increaseWidth);
 itemTwo.addEventListener('mouseup', changeBackground);
+itemThree.addEventListener('mouseout', changeText);
