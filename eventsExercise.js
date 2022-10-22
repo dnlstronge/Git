@@ -17,6 +17,9 @@ let reset = function() {
 };
 resetButton.onclick = reset;
 
+function showItem() {
+  itemFive.style.display = 'block';
+}
 function changeText() {
   itemThree.innerHTML = 'The mouse has left the element'
 }
@@ -31,3 +34,7 @@ function increaseWidth() {
 itemOne.addEventListener('mouseover', increaseWidth);
 itemTwo.addEventListener('mouseup', changeBackground);
 itemThree.addEventListener('mouseout', changeText);
+
+// used alt method for last event
+
+itemFour.onmousedown = showItem;
