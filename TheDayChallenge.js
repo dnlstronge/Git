@@ -9,6 +9,8 @@
 
 function whatday(num) {
 
+if (num <= 7 && num >= 1) { 
+
     switch (num) {
         case 1:
         return "Sunday";
@@ -17,21 +19,20 @@ function whatday(num) {
         case 3:
           return "Tuesday";
         case 4:
-          day = "Wednesday";
+          return "Wednesday";
         case 5:
-          day = "Thursday";
+          return "Thursday";
         case 6:
-          return "Friday"
+          return "Friday";
         case 7: 
-          return "Saturday" 
-        case num > 7 || num < 1 || num == NaN:
-        return  "Wrong, please enter a number between 1 and 7"
-       
-      
-    
+          return "Saturday"; 
 }
+} else {
+    return "Wrong, please enter a number between 1 and 7";
 }
+};
 
 //tried a switch statement as solution
+//seems to work after if else statement also added to catch numbers outside 1-7
 //testcode:
-console.log(whatday(4));
+console.log(whatday(-6));
