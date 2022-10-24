@@ -33,3 +33,9 @@ console.log(surgeonRomero.name);
 //call vacationdays method with an input of 3 on surgeon romero:
 
 surgeonRomero.takeVacationDays(3);
+
+//test should output 17
+
+console.log(surgeonRomero.remainingVacationDays)
+
+//test (clear)
