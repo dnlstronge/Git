@@ -44,5 +44,29 @@ class Media {
   get director() {return this._director};
   get runTime() {return this._runTime};
   }
-  const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', '544');
+  // new instance
+  const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', 644);
+  // new instance
+  const speed = new Movie('Jan de Bont', 'Speed', 116); 
+  
+  ///tests
+  historyOfEverything.toggleCheckOutStatus();
+  console.log(historyOfEverything.isCheckedOut);
+  //test array
+  historyOfEverything.addRating(4);
+  historyOfEverything.addRating(4);
+  historyOfEverything.addRating(5);
+  //test average works
+  console.log(historyOfEverything.getAverageRating());
+  
+  //test speed instance
+  speed.toggleCheckOutStatus();
+  console.log(speed.isCheckedOut);
+  //test Array
+  speed.addRating(1);
+  speed.addRating(1);
+  speed.addRating(5);
+  //test average works
+  console.log(speed.getAverageRating());
+  // tests (CLEAR)
   
