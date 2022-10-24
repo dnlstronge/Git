@@ -10,6 +10,11 @@ class Media {
     get keyThree() {
       return this._keyThree;
     }
+  toggleCheckOutStatus() {
+       this._isCheckedOut = !this.isCheckedOut; 
+    }
+  
+  
     set keyTwo(newKeyTwo) {
       this.keyTwo = newKeyTwo;
     }
