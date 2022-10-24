@@ -29,6 +29,18 @@ class Media {
   class Book extends Media{
     constructor(author, title, pages) {
       super(title);
-      this.author = author;
-      this.pages = pages
+      this._author = author;
+      this._pages = pages;
     }
+    get author() {return this._author};
+    get pages() {return this._pages};
+  }
+  class Movie extends Media {
+    constructor(director, title, runTime) {
+    super(title);
+    this._director = director;
+    this._pages = pages; 
+  }
+  get director() {return this._director};
+  get pages() {return this._pages};
+  }
