@@ -35,4 +35,4 @@ if (num <= 7 && num >= 1) {
 //tried a switch statement as solution
 //seems to work after if else statement also added to catch numbers outside 1-7
 //testcode:
-console.log(whatday(-6));
+console.log(whatday(4));
