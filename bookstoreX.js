@@ -10,6 +10,7 @@ class Media {
     get keyThree() {
       return this._keyThree;
     }
+    //sets to opposite of what it is
   toggleCheckOutStatus() {
        this._isCheckedOut = !this.isCheckedOut; 
     }
