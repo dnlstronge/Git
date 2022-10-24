@@ -1,6 +1,6 @@
 class Media {
     constructor() {
-      this._title = title;
+      this._title = 'title';
       this._isCheckedOut = false;
       this._ratings = [];
     }
@@ -39,8 +39,10 @@ class Media {
     constructor(director, title, runTime) {
     super(title);
     this._director = director;
-    this._pages = pages; 
+    this._runTime = runTime; 
   }
   get director() {return this._director};
-  get pages() {return this._pages};
+  get runTime() {return this._runTime};
   }
+  const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', '544');
+  
