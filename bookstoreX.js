@@ -1,22 +1,34 @@
 class Media {
-    constructor(keyOne) {
-      this._keyOne = title;
-      this._keyTwo = false;
-      this._keyThree = [];
+    constructor() {
+      this._title = title;
+      this._isCheckedOut = false;
+      this._ratings = [];
     }
-    get keyTwo() {
-      return this._keyTwo;
+    get isCheckedOut() {
+      return this._isCheckedOut;
     }
-    get keyThree() {
-      return this._keyThree;
+    get ratings() {
+      return this._ratings;
     }
-    //sets to opposite of what it is
+    set isCheckedOut(value) {
+      this.isCheckedOut = value
+    }
+    //METHOD
   toggleCheckOutStatus() {
        this._isCheckedOut = !this.isCheckedOut; 
     }
   
-  
-    set keyTwo(newKeyTwo) {
-      this.keyTwo = newKeyTwo;
-    }
+  getAverageRating() {
+  let ratingsSum = this.ratings.reduce((accumulator, rating) => accumulator + rating);
+    return ratingsSum / this.ratings.length;
   }
+  addRating(value) {
+      this.ratings.push(value)
+  }
+  }
+  class Book extends Media{
+    constructor(author, title, pages) {
+      super(title);
+      this.author = author;
+      this.pages = pages
+    }
