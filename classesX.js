@@ -21,10 +21,22 @@ class HospitalEmployee {
 }
 
 class Nurse extends HospitalEmployee {
- constructor(name, certifications) {
-   super(name);
-   this._certifications = certifications;
- } 
+  constructor(name, certifications) {
+    super(name);
+    this._certifications = certifications;
+  } 
+  
+  get certifications() {
+    return this._certifications;
+  }
+  
+  addCertification(newCertification) {
+    this.certifications.push(newCertification);
+  }
 }
 
 const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays);
+nurseOlynyk.addCertification('Genetics');
+console.log(nurseOlynyk.certifications);
