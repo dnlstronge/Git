@@ -1,4 +1,5 @@
-//excercise to make a fictional school catalogue
+/*excercise to make a system for a fictional school allowing for instances to be
+created and demonstrating inheritence */
 
 class School{
   constructor(name, level, numberOfStudents) {
