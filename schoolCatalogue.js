@@ -15,4 +15,10 @@ class school{
   get numberOfStudents() {
     return this._numberOfStudents;
   }
+  set numberOfStudents(value) {
+    if (value = NaN) {console.log("Invalid input: numberOfStudents must be set to a Number.")
+    } else {
+      this.numberOfStudents = value;
+    }
+}
 }
