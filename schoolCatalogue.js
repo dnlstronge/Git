@@ -1,10 +1,10 @@
 //excercise to make a fictional school catalogue
 
-class school{
+class School{
   constructor(name, level, numberOfStudents) {
-    _name = name;
-    _level = level;
-    _numberOfStudents = numberOfStudents;
+    this._name = name;
+    this._level = level;
+    this._numberOfStudents = numberOfStudents;
   }
   get name() {
     return this._name;
@@ -23,11 +23,29 @@ class school{
 }
 quickFacts() {
   console.log(this.name + "educates " + this.numberOfStudents + "students at the " + this.level + "school level.")
- }
+  }
 static pickSubstituteTeacher (substituteTeachers) {
-  const randoI = Math.floor(substituteTeachers.length * Math.Random());
+const randoI = Math.floor(substituteTeachers.length * Math.Random());
 return substituteTeachers[randoI];
 }
-
-
 }
+class PrimarySchool extends School {
+  constructor(name, numberOfStudents, pickupPolicy) {
+    super (name, 'primary', numberOfStudents);
+    this._pickupPolicy = pickupPolicy;
+  }
+  get pickupPolicy() {
+    return this._pickupPolicy;
+  }
+}
+class HighSchool extends School {
+  constructor(name, numberOfStudents, sportsTeams) {
+    super(name, 'high', numberOfStudents) 
+      this._sportsTeams = sportsTeams;
+    }
+    get sportsTeams() {
+      return this._sportsTeams;
+    }
+  }
+  const lorraineHansbury = new PrimarySchool("Lorraine Hansbury", 514, 'Students must be picked up by a parent, guardian or a family member over the age of 13');
+
